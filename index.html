@@ -3,13 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <title>Add React in One Minute</title>
+    <link rel="shortcut icon" href="icon/faviconps.ico"/>
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script> 
+      $(document).ready(function(){ 
+        $.get("about.html", function(data) {
+          $("#header").html(data);
+        });
+      }); 
+    </script> 
   </head>
   <body>
-
-    <h2>Add React in One Minute</h2>
-    <p>This page demonstrates using React with no build tooling.</p>
-    <p>React is loaded as a script tag.</p>
-
+    <div class="header-page">
+      <div class="header-photo">
+        <img src="images/myphoto.jpg">
+      </div>
+      <div class="header-name">
+        <p>Pei Syuan Lin</p>
+      </div>
+      <div class="header-link">
+        <ul>
+          <li><img src="icon/github-logo.svg" style="width:20px;height: 20px;" alt='icon-github' /><span>Github</span></li>
+          <li><img src="icon/envelope.svg" style="width:20px;height: 20px;" alt='icon-github' /><span>Email</span></li>
+          <li><img src="icon/tel.svg" style="width:20px;height: 20px;" alt='icon-github' /><span>Tel</span></li>
+        </ul>
+      </div> 
+    </div>
+    
+    <div id="header"></div>
+    
 
     <div id="like_button_container"></div>
 
