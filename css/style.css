@@ -1,16 +1,16 @@
 .header-page {
     position: relative;
-    width: 100%;
     padding-top: 100px;
     padding-bottom: 30px;
     background-color: rgb(57, 66, 81);
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
  .header-photo{
     position: relative;
     padding-top: 1.5%;
     width: 100%;
-    border: 1px solid red;
     top:0;
     text-align: center;
 }
@@ -22,7 +22,6 @@
 .header-name {
     padding-top:2%;
     position: relative;
-    border: 1px solid yellow;
     text-align: center;
     color: #f8f9fa;
     font-size: 30px;

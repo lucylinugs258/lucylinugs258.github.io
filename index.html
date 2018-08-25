@@ -12,12 +12,13 @@
     <script> 
       $(document).ready(function(){ 
         $.get("about.html", function(data) {
-          $("#header").html(data);
+          $("#about").html(data);
         });
       }); 
     </script> 
   </head>
   <body>
+    <div class="container-fluid">
     <div class="header-page">
       <div class="header-photo">
         <img src="images/myphoto.jpg">
@@ -34,16 +35,14 @@
       </div> 
     </div>
     
-    <div id="header"></div>
+    <div id="about"></div>
     
 
     <div id="like_button_container"></div>
-
-   
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-
     <script src="like_button.js"></script>
 
+    </div>
   </body>
 </html>
