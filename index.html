@@ -2,46 +2,284 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Add React in One Minute</title>
-    <link rel="shortcut icon" href="icon/faviconps.ico"/>
-    <link rel="stylesheet" href="css/style.css" >
+    <title>PS Blog</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" >
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script> 
-      $(document).ready(function(){ 
-        $.get("about.html", function(data) {
-          $("#about").html(data);
-        });
-      }); 
-    </script> 
+    <!-- expand  -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
   </head>
   <body>
     <div class="container-fluid">
-    <div class="header-page">
-      <div class="header-photo">
-        <img src="images/myphoto.jpg">
+      <!-- header page  -->
+      <div class="header-page">
+        <div class="header-photo">
+          <img src="images/myphoto.jpg">
+        </div>
+        <div class="header-name">
+          <p>Pei Syuan Lin</p>
+        </div>
+        <div class="header-link">
+          <ul>
+            <li><a href="https://github.com/lucylinugs258" target="_blank"><img src="icon/github-logo.svg" style="width:20px;height: 20px;" alt='icon-github' /><span>Github</span></a></li>
+            <li><a href="mailto:peihsuan0518@gmail.com"><img src="icon/envelope.svg" style="width:20px;height: 20px;" alt='icon-github' /><span>Email</span></a></li>
+            <li><a href="tel:0975071159"><img src="icon/tel.svg" style="width:20px;height: 20px;" alt='icon-github' /><span>Tel</span></a></li>
+          </ul>
+        </div> 
       </div>
-      <div class="header-name">
-        <p>Pei Syuan Lin</p>
-      </div>
-      <div class="header-link">
-        <ul>
-          <li><img src="icon/github-logo.svg" style="width:20px;height: 20px;" alt='icon-github' /><span>Github</span></li>
-          <li><img src="icon/envelope.svg" style="width:20px;height: 20px;" alt='icon-github' /><span>Email</span></li>
-          <li><img src="icon/tel.svg" style="width:20px;height: 20px;" alt='icon-github' /><span>Tel</span></li>
-        </ul>
-      </div> 
-    </div>
-    
-    <div id="about"></div>
-    
 
-    <div id="like_button_container"></div>
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src="like_button.js"></script>
+      <!-- about me  -->
+      <div id="about" class="block">
+        <p class="title">關於我</p>
+        <hr>
+        <div  class="content">
+          <p>我叫林沛萱，出生於台灣彰化。</p>
+          <p>我的個性樂觀開朗，有良好的抗壓能力，並且樂於學習新事物。優點為做事認真、擁有良好的思辨能力、
+            理性溝通、情緒管理良好、人際關係相處不錯、自我時間管理、學習快；缺點為記性差、心直口快、沒潔癖。</p>
+          <p>大學學習過Java, C語言, MySQL, 及網頁程式語言(html, css)，擅長的部份為網頁程式語言。畢業專題製作一個
+            「香草知識網站」，使用技術為php, html, css及php/java-bridge。研究所參與前端訓練營及方客特有限公司
+            的前端實習，對於前端有更深的認識，而程式撰寫方面也有所收穫。</p>
+          <p>研究所論文題目為「電子口碑可信度與採用之研究：個人、社會、技術之觀點」。探討影響電子口碑可信度之關鍵因素以及影響可信度與採用之間之調節變數。
+            研究所期間曾參與系上所舉辦之程式實作課程活動、創科資訊所舉辦之前端訓練營以及方客特有限公司之實習生。</p>
+        </div>
+      </div>
+
+      <!-- education  -->
+      <div id="education" class="block">
+        <p class="title">學歷</p>
+        <hr>
+        <div class="content">
+          <div class="edu-list">
+            <div class="edu-block">
+              <img class="edu-img" src="images/chi-nan.png">
+              <div class="edu-univer">
+                <p style="margin:0;font-size: 20px;">國立暨南國際大學</p>
+                <p style="margin:0;">資訊管理學系</p>
+              </div>
+              <p class="edu-date">2012-2016</p>
+            </div>
+            <div class="edu-block">
+              <img class="edu-img" src="images/chung-cheng.png">
+              <div class="edu-univer">
+                <p style="margin:0;font-size: 20px;">國立中正大學</p>
+                <p style="margin:0;">資訊管理所</p></div>
+              <p class="edu-date">2016-2018</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- skill  -->
+      <div id="skill" class="block">
+        <p class="title">技能/專長</p>
+        <div class="content">
+          <div class="row" title="" data-original-title="" aria-describedby="tooltip316282">
+            <div class="col-sm-4 item"><hr>
+              <div class="sk-block sk-web">
+                <h1>Web</h1>
+                <ul class="sk-ul">
+                  <li>html</li>
+                  <li>css</li>
+                  <li>bootstrap</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-4 item"><hr>
+              <div class="sk-block sk-version">
+                <h1>版本控制</h1>
+                <ul class="sk-ul">
+                  <li>github</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-4 item"><hr>
+              <div class="sk-block sk-tool">
+                <h1>開發工具</h1>
+                <ul class="sk-ul">
+                  <li>Visual Studio Code</li>
+                  <li>Sublime Text</li>
+                  <li>PHP Storm</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-4 item"><hr>
+              <div class="sk-block sk-js">
+                <h1>JS</h1>
+                <ul class="sk-ul">
+                  <li>Next.js</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-4 item"><hr>
+              <div class="sk-block sk-other">
+                <h1>其他</h1>
+                <ul class="sk-ul">
+                  <li>RWD</li>
+                  <li>markdown</li>
+                  <li>basecamp專案管理工具</li>
+                  <li>slack</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- experience  -->
+      <div id="experience" class="block">
+        <p class="title">經歷</p>
+        <hr>
+        <div  class="content">
+          <div class="exp-block">
+            <h2>大學<span>2012-2016</span></h2>
+            <ul>
+              <li>資管週公關</li>
+              <li>系女排隊長</li>
+              <li>校內專題競賽- 佳作</li>
+              <li>資訊服務應用創新競賽-亞太組</li>
+              <li>謝師宴籌劃人員</li>
+            </ul>
+          </div>
+          <div class="exp-block">
+            <h2>研究所<span>2016-2018</span></h2>
+            <ul>
+              <li>參加前端訓練營</li>
+              <li>前端實習經驗</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- collection  -->
+      <div id="collection" class="block">
+        <p class="title">作品集</p>
+        <hr>
+        <div  class="content">
+          <!-- 大學專題  -->
+          <div data-role="main" class="ui-content">
+            <div data-role="collapsible">
+              <h1 class="exp-line">大學專題 - 「植基於 Ontology 之香草健康專家系統網站」</h1>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="videoWrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PxIT2I_iE5E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <p class="col-title">「植基於 Ontology 之香草健康專家系統網站」</p>
+                  <div>
+                    <ul>
+                      <li>專案時間：2015/12</li>
+                      <li>相關技術：php/java bridge, php, html, css</li>
+                      <li>連結：<a href="https://www.youtube.com/watch?time_continue=1&v=PxIT2I_iE5E">https://www.youtube.com/watch?time_continue=1&v=PxIT2I_iE5E</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-intro">
+                    <p>藉由整理香草相關知識書籍，統整出疾病與症狀所對應之香草的功效、治療配方，來提供民眾更天然健康的養生方法。此專題藉由 ontology 推論引擎建立香草專家系統網站，不但能讓使用者方便的查詢香草知識並應用在生活上，更能提供使用者一個與專家、業者進行交流的管道。</p>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 吃貨  -->
+          <div data-role="main" class="ui-content">
+            <div data-role="collapsible">
+              <h1 class="exp-line">吃貨地圖app</h1>
+              <div class="row">
+                <div class="col-xs-2">
+                  <div class="col-img">
+                    <img src="images/eaterapp.jpg">
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <p class="col-title">吃貨地圖app</p>
+                  <div>
+                    <ul>
+                      <li>專案時間：2017/8</li>
+                      <li>相關技術：html, css, react</li>
+                      <li>連結：<a href="https://hackmd.io/fRF26fhETnuEuOCNYBk02A?view">hackmd-吃貨地圖app</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-intro">
+                    <p>參加前端訓練營時，小組專題成果展之作品。此APP純前端，有店家、地圖、吃貨列表及使用者個人畫面。下列連結圖示為APP詳細功能介紹。</p>
+                  </div>  
+                </div>
+                <div class="col-xs-6">
+                  <div class="col-img">
+                    <img src="images/eaterfunction.jpg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- lajolla  -->
+          <div data-role="main" class="ui-content">
+            <div data-role="collapsible">
+              <h1 class="exp-line">實習專案 - Lajolla</h1>
+              <div class="row">
+                <div class="col-xs-4">
+                  <p class="col-title">實習專案 - Lajolla</p>
+                  <div>
+                    <ul>
+                      <li>專案時間：2018/3-5</li>
+                      <li>相關技術：html, react, style component</li>
+                      <li>連結：<a href="http://lajolla1996.com/">http://lajolla1996.com/</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-intro">
+                    <p>實習期間所參與之專案。負責前端部分頁面(關於lajolla、保固說明、聯絡我們)。</p>
+                  </div>  
+                </div>
+                <div class="col-xs-8">
+                  <div class="col-img">
+                    <img src="images/lajolla.jpg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- naer  -->
+          <div data-role="main" class="ui-content">
+            <div data-role="collapsible">
+              <h1 class="exp-line">實習專案 - 國家教育研究院</h1>
+              <div class="row">
+                <div class="col-xs-7">
+                  <div class="col-img">
+                    <img src="images/naer.jpg">
+                  </div>
+                </div>
+                <div class="col-xs-5">
+                  <p class="col-title">實習專案 - 國家教育研究院</p>
+                  <div>
+                    <ul>
+                      <li>專案時間：2018/3-5</li>
+                      <li>相關技術：html, react, style component</li>
+                    </ul>
+                  </div>
+                  <div class="col-intro">
+                    <p>實習期間所參與之專案。負責前端部分頁面(Research, Resource, Centers, About-leadership, vision, mission, location)。</p>
+                  </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+
+      <!-- footer  -->
+      <div class="footer header-page">
+        <h6 style="color: white; text-align:center;">2018 © Pei Syuan Lin</h6>
+      </div>
+
+      
+
 
     </div>
   </body>
